@@ -15,6 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('lastname');
+            $table->enum('main_interest_in_yowza', [
+                'Business Tool',
+                'Business Opportunities',
+                'Document Library',
+                'Funding/Sponsorship',
+                'Marketplace',
+                'Training',
+            ])->default('Business Tool');
+            $table->string('mobile_number')->nullable();
+            $table->string('landline_number')->nullable();
+            $table->enum('gender', ['male', 'female', 'prefer not to say'])->nullable();
+            $table->enum('ethnics_group', ['African', 'White', 'Coloured', 'Indian'])->nullable();
+            $table->string('disability')->nullable();
+            $table->enum('nationality', ['South Africa', 'Lesotho', 'Botswana', 'Zambia', 'Zimbabwe', 'Mozambique'])->default('South Africa');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

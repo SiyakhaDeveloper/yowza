@@ -16,9 +16,10 @@ class RoleSeeder extends Seeder
         //
         $items = [
             ['name' => 'Administrator (can create other users)', 'guard_name' => 'web'],
-            ['name' => 'Corporate Customer / Donor / Funder', 'guard_name' => 'web'],
-            ['name' => 'Social Enterprises (NPO / NGO / PBO / Schools / etc)', 'guard_name' => 'web'],
-            ['name' => 'Volunteers', 'guard_name' => 'web'],
+            ['name' => 'Individual', 'guard_name' => 'web'],
+            ['name' => 'Corporate Sponsors', 'guard_name' => 'web'],
+            ['name' => 'Development Partners', 'guard_name' => 'web'],
+            ['name' => 'SMME', 'guard_name' => 'web'],
         ];
 
         foreach($items as $item){
