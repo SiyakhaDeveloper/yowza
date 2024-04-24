@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ComplianceAuditController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CTAControlller;
@@ -45,10 +46,9 @@ Route::get('/', function (){
 Illuminate\Support\Facades\Auth::routes(['verify' => true]);
 
 
-Route::group(['middleware' => ['isAdmin', 'verified'],'prefix' => 'admin', 'as' => 'admin.'], function(){
+Route::group(['middleware' => ['isAdmin'],'prefix' => 'portal', 'as' => 'portal.'], function(){
 
-
-
+    Route::get('/dashboard',[DashboardController::class,'index']);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -65,3 +65,4 @@ Route::middleware('auth')->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
