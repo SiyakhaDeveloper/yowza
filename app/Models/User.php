@@ -21,18 +21,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'lastname',
-        'email',
-        'password',
-        'about',
-        'location',
-        'profile_image',
-        'social_twitter',
-        'social_facebook',
-        'social_instagram',
-        'social_linkedin',
+    protected $guarded = [
+
     ];
 
     /**
@@ -55,42 +45,26 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function videos()
-    {
-        return $this->hasMany(SocialEnterpriseVideo::class);
-    }
-    public function role()
-    {
-        return $this->belongsToMany(Role::class, 'role_user');
-    }
+
+
 
     public function isAdmin()
     {
         return $this->role()->where('role_id', 1)->first();
     }
 
-    public function funderQuestion()
-    {
-        return $this->hasOne(FunderQuestion::class);
-    }
+
 
 //    public function socialEnterprise()
 //    {
 //        return $this->hasOne(SocialEnterprise::class);
 //    }
 
-    public function socialEnterprise(): HasMany
-    {
-        return $this->hasMany(SocialEnterprise::class);
-    }
 
-    public function applications()
-    {
-        return $this->hasMany(Applications::class);
-    }
 
-    public function volunteer()
+    public function organizations()
     {
+<<<<<<< HEAD
         return $this->hasOne(Volunteer::class);
     }
 
@@ -107,6 +81,9 @@ class User extends Authenticatable
     public function volunteerQuestions(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(VolunteerQuestion::class);
+=======
+        return $this->belongsToMany(Organization::class);
+>>>>>>> 983069dd5e4fe35721f73dc0f995d3eec8c57853
     }
 
     public function downloadHistories(): HasMany
