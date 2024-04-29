@@ -43,7 +43,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
-                            <span class="text-xs badge bg-slate-150 text-slate-800 dark:bg-navy-500 dark:text-navy-100">{{date('d-m-Y',strtotime($post->created_at))}}</span>
+                            <span class="text-xs badge bg-slate-150 text-slate-700 dark:bg-navy-500 dark:text-navy-100">{{date('d-m-Y',strtotime($post->created_at))}}</span>
                         </p>
                     </div>
                 </div>
