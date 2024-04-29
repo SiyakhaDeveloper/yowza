@@ -64,7 +64,7 @@ class User extends Authenticatable
 
     public function organizations()
     {
-<<<<<<< HEAD
+
         return $this->hasOne(Volunteer::class);
     }
 
@@ -81,9 +81,11 @@ class User extends Authenticatable
     public function volunteerQuestions(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(VolunteerQuestion::class);
-=======
+
         return $this->belongsToMany(Organization::class);
->>>>>>> 983069dd5e4fe35721f73dc0f995d3eec8c57853
+
+        return $this->belongsToMany(Organization::class);
+
     }
 
     public function downloadHistories(): HasMany
