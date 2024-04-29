@@ -53,7 +53,7 @@
 
                 <!-- Apps -->
                 <a
-                    href="apps-list.html"
+                    href="#"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'CONNECT'"
                 >
@@ -96,7 +96,7 @@
 
                 <!-- Pages And Layouts -->
                 <a
-                    href="pages-card-user-1.html"
+                    href="#"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'THRIVE'"
                 >
@@ -130,7 +130,7 @@
 
                 <!-- Forms -->
                 <a
-                    href="form-input-text.html"
+                    href="#"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'FAQS'"
                 >
@@ -159,9 +159,9 @@
 
                 <!-- Components -->
                 <a
-                    href="components-accordion.html"
+                    href="{{route("admin.post.create")}}"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-                    x-tooltip.placement.right="'Components'"
+                    x-tooltip.placement.right="'Blog'"
                 >
                     <svg
                         class="size-7"
@@ -188,7 +188,7 @@
 
                 <!-- Elements -->
                 <a
-                    href="elements-avatar.html"
+                    href="{{route('admin.post.index')}}"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'Elements'"
                 >

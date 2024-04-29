@@ -99,9 +99,9 @@ class User extends Authenticatable
         return $this->hasMany(VolunteerApplication::class);
     }
 
-    public function blogs(): HasMany
+    public function posts(): HasMany
     {
-        return $this->hasMany(Blog::class);
+        return $this->hasMany(Post::class);
     }
 
     public function volunteerQuestions(): \Illuminate\Database\Eloquent\Relations\HasOne
