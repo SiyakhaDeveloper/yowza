@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\AlternativeContactPersonController;
 use \App\Http\Controllers\Admin\OrganisationController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\CTAApplicationController;
+use App\Http\Controllers\OrganisationWorkspaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,9 @@ Illuminate\Support\Facades\Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['isAdmin'],'prefix' => 'portal', 'as' => 'portal.'], function(){
 
     Route::get('/dashboard',[DashboardController::class,'index']);
+    Route::resource('/organization-workspace', OrganisationWorkspaceController::class);
+    Route::post('/organization-workspace/{workspace}/join', [OrganisationWorkspaceController::class, 'join'])->name('workspaces.join');
+
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
