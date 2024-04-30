@@ -11,10 +11,6 @@ class Role extends SpatieRole
     use HasFactory;
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    // public function permission()
-    // {
-    //     return $this->belongsToMany(Permission::class, 'permission_role');
-    // }
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
