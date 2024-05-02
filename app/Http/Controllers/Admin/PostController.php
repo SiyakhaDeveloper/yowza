@@ -29,7 +29,7 @@ class PostController extends Controller
         $request->validate([
            'title'=> 'required',
            'categories'=> 'required|array',  // Add validation for categories
-           'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // adjust max file size as needed
+           'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000', // adjust max file size as needed
         ]);
 
 
@@ -54,4 +54,12 @@ class PostController extends Controller
 
         return redirect()->route('admin.post.index');
     }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        $posts = Post::all();
+        return view('admin.post.show',compact('post','posts'));
+    }
+
 }
