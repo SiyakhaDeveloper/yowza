@@ -448,7 +448,7 @@
                             </div>
                             <div>
                                 <a
-                                    href="#"
+                                    href="{{route('admin.post.show',$post->id)}}"
                                     class="text-lg font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                                 >{{$post->title}}</a
                                 >
@@ -459,7 +459,7 @@
                             <div class="grow">
                                 <div class="mt-2 flex items-center text-xs">
                                     <a
-                                        href="#"
+                                        href="{{route('admin.post.show',$post->id)}}"
                                         class="flex items-center space-x-2 hover:text-slate-800 dark:hover:text-navy-100"
                                     >
                                         <div class="avatar size-6">
@@ -493,10 +493,8 @@
                 </div>
             </div>
         </div>
-        <div
-            class="col-span-12 py-6 lg:sticky lg:bottom-0 lg:col-span-4 lg:self-end"
-        >
-            <div class="card">
+        <div class="col-span-12 py-6 lg:sticky lg:bottom-0 lg:col-span-4 lg:self-end">
+            <div class="card" style="padding-left: 5px;padding-right: 5px;">
                 <div class="mt-5">
                     <p
                         class="border-b border-slate-200 pb-2 text-base text-slate-800 dark:border-navy-600 dark:text-navy-100 px-2.5"
@@ -510,19 +508,19 @@
                             <div class="flex justify-between space-x-2">
                                 <div class="flex flex-1 flex-col justify-between">
                                     <div>
-                                        <p class="text-xs font-medium line-clamp-1">06 Nov</p>
+                                        <p class="text-xs font-medium line-clamp-1">{{$post->created_at}}</p>
                                         <div
                                             class="mt-1 text-slate-800 line-clamp-3 dark:text-navy-100"
                                         >
                                             <a
-                                                href="#"
+                                                href="{{route('admin.post.show',$post->id)}}"
                                                 class="font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light px-2"
                                             >{{$post->title}}</a
                                             >
                                         </div>
                                     </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xs font-medium line-clamp-1">2 min read</p>
+                                    <div class="flex items-center justify-between " >
+                                        <p class="text-xs font-medium line-clamp-1 ">2 min read</p>
 
                                         <div class="flex">
                                             <button

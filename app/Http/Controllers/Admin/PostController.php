@@ -51,8 +51,11 @@ class PostController extends Controller
 
         $post->save();
         $post->categories()->sync($request->input('categories', []));
-
-        return redirect()->route('admin.post.index');
+        $notification = array(
+            'message' => 'blog post created successfully',
+            'alert-type'=> 'success'
+        );
+        return redirect()->route('admin.post.index')->with($notification);
     }
 
     public function show($id)

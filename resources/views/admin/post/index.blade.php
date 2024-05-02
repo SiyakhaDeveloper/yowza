@@ -1,6 +1,7 @@
 @extends('layouts.master_dashboard_layout')
 
 @section('main_content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <div
         class="mt-4 px-[var(--margin-x)] transition-all duration-[.25s] sm:mt-5 lg:mt-6"
     >
