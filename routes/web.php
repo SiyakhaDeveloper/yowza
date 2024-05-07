@@ -1,10 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
-//use App\Http\Controllers\Admin\LibraryController;
-//use App\Http\Controllers\Admin\ProfileController;
-//use App\Http\Controllers\Admin\RoleController;
-
 use App\Http\Controllers\Corporate\CorporateDashboardController;
 use App\Http\Controllers\Development\DevelopmentDashboardController;
 use App\Http\Controllers\Individual\IndividualDashboardController;
@@ -12,38 +8,20 @@ use App\Http\Controllers\SMME\SmmeDashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\Admin\ApplicationsController;
+use App\Http\Controllers\Admin\AlternativeContactPersonController;
+use \App\Http\Controllers\Admin\OrganisationController;
+use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\CTAApplicationController;
+//use App\Http\Controllers\Admin\LibraryController;
+use App\Http\Controllers\Admin\ProfileController;
+//use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\OrganisationWorkspaceController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-//Route::get('/', function () {
-//    return redirect()->route('login');
-//});
-
-Route::get('/', function (){
-   return view('welcome');
+Route::get('/', function () {
+    return redirect()->route('login');
 });
-
-Illuminate\Support\Facades\Auth::routes(['verify' => true]);
-
-
-
-
-
-
 
 Route::middleware(['auth'])->group(function () {
     // Routes for Administrator
@@ -88,21 +66,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Route::get('faq', function () {
 //    return view('helpdesk.faq');
 //})->name('faq');
-
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 // });
 
+Auth::routes();
 Route::get('/create-workspace', 'OrganisationWorkspaceController@create')->name('createWorkspace');
 Route::post('/create-workspace', 'OrganisationWorkspaceController@store')->name('storeWorkspace');
-
-
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/workspace-test', function(){
     return view('workspace.register_workspace');
 });
+

@@ -64,7 +64,28 @@ class User extends Authenticatable
 
     public function organizations()
     {
+
+        return $this->hasOne(Volunteer::class);
+    }
+
+    public function volunteerApplications()
+    {
+        return $this->hasMany(VolunteerApplication::class);
+    }
+
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function volunteerQuestions(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(VolunteerQuestion::class);
+
         return $this->belongsToMany(Organization::class);
+
+        return $this->belongsToMany(Organization::class);
+
     }
 
     public function downloadHistories(): HasMany
