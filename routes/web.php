@@ -77,7 +77,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Routes for SMME
     Route::group(['middleware' => ['isSmme'], 'prefix' => 'smme/{prefix}', 'as' => 'smme.'], function () {
-        Route::get('/dashboard', [SmmeDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/dashboard2', [SmmeDashboardController::class, 'index'])->name('dashboard');
         Route::resource('/organization-workspace', OrganisationWorkspaceController::class);
         Route::post('/organization-workspace/{workspace}/join', [OrganisationWorkspaceController::class, 'join'])->name('workspaces.join');
     });
