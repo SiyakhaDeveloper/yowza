@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,73 +9,45 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="{{asset('backend/css/app.css')}}" />
+    <link rel="stylesheet" href="{{asset('backend/css/custom.css')}}" />
 
+    <!-- Javascript Assets -->
+    <script src="{{asset('backend/js/app.js')}}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+        <div id="root" class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900">
+            <div class="fixed top-0 hidden p-6 lg:block lg:px-12">
+                <a href="#" class="flex items-center space-x-2">
+                    <img class="size-12" src="https://yowza.co.za/images/Logo/April-2024/yowza-logo-mark-1.png"
+                        alt="logo">
+                    {{-- <p class="text-xl font-semibold uppercase text-slate-700 dark:text-navy-100">
+                        lineone
+                    </p> --}}
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+            </div>
+            <div class="hidden w-full place-items-center lg:grid">
+                <div class="w-full max-w-lg p-6">
+                    <img class="w-full" x-show="!$store.global.isDarkModeEnabled"
+                        src="https://yowza.co.za/images/2023/11/17/shutterstock_137778674.jpg" alt="image">
+                    <img class="w-full" x-show="$store.global.isDarkModeEnabled"
+                        src="images/illustrations/dashboard-meet-dark.svg" alt="image" style="display: none;">
                 </div>
             </div>
-        </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <main class="flex w-full flex-col items-center bg-white dark:bg-navy-700 lg:max-w-md">
+                @yield('content')
+            </main>
+        </div>
     </div>
 </body>
+
 </html>
