@@ -24,6 +24,7 @@
             </div>
         </div>
 
+        @if ($workspaces->isEmpty())
         <div class="mt-4 sm:mt-5 lg:mt-6">
             <div class="card px-4 pb-4 sm:px-5">
                 <div class="my-3 flex h-8 items-center justify-between">
@@ -55,6 +56,8 @@
 
             </div>
         </div>
+        @else
+
         <div class="mt-4 sm:mt-5 lg:mt-6">
             <div class="flex h-8 items-center justify-between">
                 <h2 class="text-base font-medium tracking-wide text-slate-700 dark:text-navy-100">
@@ -65,6 +68,7 @@
                     All</a>
             </div>
             <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
+                @foreach ($workspaces as $workspace)
                 <div class="card flex-row overflow-hidden">
                     <div class="h-full w-1 bg-gradient-to-b from-blue-500 to-purple-600"></div>
                     <div class="flex flex-1 flex-col justify-between p-4 sm:px-5">
@@ -112,102 +116,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="card flex-row overflow-hidden">
-                    <div class="h-full w-1 bg-gradient-to-b from-info to-info-focus"></div>
-                    <div class="flex flex-1 flex-col justify-between p-4 sm:px-5">
-                        <div>
-                            <img class="size-12 rounded-lg object-cover object-center"
-                                src="{{asset('backend/images/others/design-sm.jpg')}}" alt="image" />
-                            <h3 class="mt-3 font-medium text-slate-700 line-clamp-2 dark:text-navy-100">
-                                Learn UI/UX Design
-                            </h3>
-                            <p class="text-xs+">Tue. 10:00 - 11:30</p>
-                            <div class="mt-2 flex space-x-1.5">
-                                <a href="#"
-                                    class="tag bg-info py-1 px-1.5 text-white hover:bg-info-focus focus:bg-info-focus active:bg-info-focus/90">
-                                    UI/UX Design
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mt-10 flex justify-between">
-                            <div class="flex -space-x-2">
-                                <div class="avatar size-7 hover:z-10">
-                                    <img class="rounded-full ring ring-white dark:ring-navy-700"
-                                        src="{{asset('backend/images/avatar/avatar-20.jpg')}}" alt="avatar" />
-                                </div>
+                @endforeach
 
-                                <div class="avatar size-7 hover:z-10">
-                                    <div
-                                        class="is-initial rounded-full bg-warning text-xs+ uppercase text-white ring ring-white dark:ring-navy-700">
-                                        iu
-                                    </div>
-                                </div>
-
-                                <div class="avatar size-7 hover:z-10">
-                                    <img class="rounded-full ring ring-white dark:ring-navy-700"
-                                        src="{{asset('backend/images/avatar/avatar-17.jpg')}}" alt="avatar" />
-                                </div>
-                            </div>
-                            <button
-                                class="btn size-7 rounded-full bg-slate-150 p-0 font-medium text-slate-800 hover:bg-slate-200 hover:shadow-lg hover:shadow-slate-200/50 focus:bg-slate-200 focus:shadow-lg focus:shadow-slate-200/50 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:hover:shadow-navy-450/50 dark:focus:bg-navy-450 dark:focus:shadow-navy-450/50 dark:active:bg-navy-450/90">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 rotate-45" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card flex-row overflow-hidden">
-                    <div class="h-full w-1 bg-gradient-to-b from-secondary-light to-secondary"></div>
-                    <div class="flex flex-1 flex-col justify-between p-4 sm:px-5">
-                        <div>
-                            <img class="size-12 rounded-lg object-cover object-center"
-                                src="{{asset('backend/images/others/sales-presentation-sm.jpg')}}" alt="image" />
-                            <h3 class="mt-3 font-medium text-slate-700 line-clamp-2 dark:text-navy-100">
-                                Basic of digital marketing
-                            </h3>
-                            <p class="text-xs+">Wed. 09:00 - 11:00</p>
-                            <div class="mt-2 flex space-x-1.5">
-                                <a href="#"
-                                    class="tag bg-secondary px-1.5 py-1 text-white hover:bg-secondary-focus focus:bg-secondary-focus active:bg-secondary-focus/90">
-                                    Marketing
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mt-10 flex justify-between">
-                            <div class="flex -space-x-2">
-                                <div class="avatar size-7 hover:z-10">
-                                    <img class="rounded-full ring ring-white dark:ring-navy-700"
-                                        src="{{asset('backend/images/avatar/avatar-16.jpg')}}" alt="avatar" />
-                                </div>
-
-                                <div class="avatar size-7 hover:z-10">
-                                    <div
-                                        class="is-initial rounded-full bg-info text-xs+ uppercase text-white ring ring-white dark:ring-navy-700">
-                                        jd
-                                    </div>
-                                </div>
-
-                                <div class="avatar size-7 hover:z-10">
-                                    <img class="rounded-full ring ring-white dark:ring-navy-700"
-                                        src="{{asset('backend/images/avatar/avatar-19.jpg')}}" alt="avatar" />
-                                </div>
-                            </div>
-                            <button
-                                class="btn size-7 rounded-full bg-slate-150 p-0 font-medium text-slate-800 hover:bg-slate-200 hover:shadow-lg hover:shadow-slate-200/50 focus:bg-slate-200 focus:shadow-lg focus:shadow-slate-200/50 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:hover:shadow-navy-450/50 dark:focus:bg-navy-450 dark:focus:shadow-navy-450/50 dark:active:bg-navy-450/90">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 rotate-45" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+        @endif
 
         <div class="mt-4 sm:mt-5 lg:mt-6">
             <div class="flex items-center justify-between">

@@ -15,6 +15,6 @@ class Organization extends Model
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'organization_user', 'organization_id', 'user_id');
     }
 }
