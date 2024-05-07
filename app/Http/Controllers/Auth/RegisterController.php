@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Organization;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -50,8 +53,18 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'main_interest_in_yowza' => ['nullable', 'string', 'in:Business Tool,Business Opportunities,Document Library,Funding/Sponsorship,Marketplace,Training'],
+            'mobile_number' => ['nullable', 'string', 'max:255'],
+            'landline_number' => ['nullable', 'string', 'max:255'],
+            'gender' => ['nullable', 'string', 'in:male,female,prefer not to say'],
+            'ethnics_group' => ['nullable', 'string', 'in:African,White,Coloured,Indian'],
+            'disability' => ['nullable', 'string', 'max:255'],
+            'nationality' => ['nullable', 'string', 'in:South Africa,Lesotho,Botswana,Zambia,Zimbabwe,Mozambique'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'create_workspace' => ['nullable', 'boolean'], // Boolean field indicating whether to create a workspace
+            'workspace_name' => ['required_if:create_workspace,true', 'string', 'max:255'], // Required if create_workspace is true
         ]);
     }
 
@@ -63,10 +76,47 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
+            'main_interest_in_yowza' => $data['main_interest_in_yowza'],
+            'mobile_number' => $data['mobile_number'],
+            'landline_number' => $data['landline_number'],
+            'gender' => $data['gender'],
+            'ethnics_group' => $data['ethnics_group'],
+            'disability' => $data['disability'],
+            'nationality' => $data['nationality'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        return $user;
+    }
+
+    public function showRegistrationForm()
+    {
+//        $roles = Role::all();
+        $roles = Role::whereIn('name', ['Individual', 'SMME'])->get();
+        return view('auth.register', compact('roles'));
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $user = $this->create($request->all());
+
+        // Check if the user opted to create a workspace
+        if ($request->has('create_workspace')) {
+            return redirect()->route('createWorkspace');
+        }
+
+        return redirect($this->redirectPath());
     }
 }
