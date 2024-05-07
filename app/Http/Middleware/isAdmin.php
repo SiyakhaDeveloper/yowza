@@ -20,8 +20,25 @@ class isAdmin
             return redirect('/');
         }
 
-        if (auth()->user()->hasRole('Volunteers')) {
-            return redirect('/');
+        $userRoles = auth()->user()->roles()->pluck('name')->toArray();
+
+        $prefix = null;
+
+        // Check user roles and set prefix accordingly
+        if (in_array('Administrator (can create other users)', $userRoles)) {
+            $prefix = 'admin';
+        } elseif (in_array('Individual', $userRoles)) {
+            $prefix = 'individual';
+        } elseif (in_array('Corporate Sponsors', $userRoles)) {
+            $prefix = 'corporate';
+        } elseif (in_array('Development Partners', $userRoles)) {
+            $prefix = 'development';
+        } elseif (in_array('SMME', $userRoles)) {
+            $prefix = 'smme';
+        }
+
+        if ($prefix !== null) {
+            $request->route()->setParameter('prefix', $prefix);
         }
 
         return $next($request);
