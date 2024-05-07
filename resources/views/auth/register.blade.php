@@ -64,13 +64,12 @@
                 </span>
             </label>
             <label class="relative flex">
-                <select name="role_id" id="role_id"
+                <select name="role" id="role"
                     class="form-select mt-1.5 w-full rounded-lg bg-slate-150 px-3 py-2 ring-primary/50 hover:bg-slate-200 focus:ring dark:bg-navy-900/90 dark:ring-accent/50 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
                     required>
                     <option value="">Select Your User Type</option>
-                    @foreach ($roles as $role)
-                    <option value="{{ $role->id }}">{{ $role->name }}</option>
-                    @endforeach
+                    <option value="Individual">Individual</option>
+                    <option value="SMME">SMME</option>
                 </select>
             </label>
             <label class="relative flex">
