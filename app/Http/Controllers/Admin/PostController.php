@@ -3,18 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    //
     public function index()
     {
-        $posts = Post::with('user','categories')->get();
+        $posts = Post::with('user','categories')->paginate(8);
+
         return view('admin.post.index',compact('posts'));
     }
     //function to display form
@@ -30,7 +29,7 @@ class PostController extends Controller
         $request->validate([
            'title'=> 'required',
            'categories'=> 'required|array',  // Add validation for categories
-           'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // adjust max file size as needed
+           'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000', // adjust max file size as needed
         ]);
 
 
@@ -52,7 +51,18 @@ class PostController extends Controller
 
         $post->save();
         $post->categories()->sync($request->input('categories', []));
-
-        return redirect()->route('admin.post.index');
+        $notification = array(
+            'message' => 'blog post created successfully',
+            'alert-type'=> 'success'
+        );
+        return redirect()->route('admin.post.index')->with($notification);
     }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        $posts = Post::all();
+        return view('admin.post.show',compact('post','posts'));
+    }
+
 }
