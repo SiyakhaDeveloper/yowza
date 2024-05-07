@@ -12,7 +12,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
 
-    <title>SMME Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="icon" type="image/png" href="{{asset('backend/images/Yowza_Icon_400px.png')}}" />
 
     <!-- CSS Assets -->

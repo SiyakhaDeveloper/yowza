@@ -15,13 +15,13 @@ class CategorySeeder extends Seeder
     {
         //Define categories and seed them
         $categories  = [
-          ['name'=>'Finance'],
-          ['name'=>'Management'],
-          ['name'=>'Marketing and Sales'],
-          ['name'=>'Personal Growth'],
-          ['name'=>'Customer Service'],
-          ['name'=>'Funding'],
-          ['name'=>'Entrepreneurship'],
+          ['name'=>'Finance', 'category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Management','category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Marketing and Sales','category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Personal Growth','category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Customer Service','category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Funding','category_image'=>fake()->imageUrl(70, 40)],
+          ['name'=>'Entrepreneurship','category_image'=>fake()->imageUrl(70, 40)],
         ];
 
         //insert  categories into the database

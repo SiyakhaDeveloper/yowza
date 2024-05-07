@@ -159,7 +159,7 @@
 
                 <!-- Components -->
                 <a
-                    href="{{route("admin.post.create")}}"
+                    href="#"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'Blog'"
                 >
@@ -188,7 +188,7 @@
 
                 <!-- Elements -->
                 <a
-                    href="{{route('admin.post.index')}}"
+                    href="#"
                     class="flex size-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                     x-tooltip.placement.right="'Elements'"
                 >
