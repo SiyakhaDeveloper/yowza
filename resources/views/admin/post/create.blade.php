@@ -32,7 +32,7 @@
 
     <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
         <div class="col-span-12 lg:col-span-10">
-            <form action="{{route('admin.post.store')}}" method="post"  enctype="multipart/form-data">
+            <form action="{{url('/admin/admin/post')}}" method="post"  enctype="multipart/form-data">
                 @csrf
             <div class="card">
                 <div class="tabs flex flex-col">

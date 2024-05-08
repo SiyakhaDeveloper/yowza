@@ -24,11 +24,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
         Route::get('/post', [PostController::class, 'index'])->name('post.index');
         Route::post('/post', [PostController::class, 'store'])->name('post.store');
-        Route::get('/post/{id}',[PostController::class,'show'])->name('post.show');
+        Route::get('/post/{id}',[PostController::class,'show'])->name('admin.post.show');
 
         //Category Routes
         Route::controller(CategoryController::class)->group(function(){
-           Route::get('/all/category','AllCategory')->name('all.category');
+           Route::get('/category/all','AllCategory')->name('all.category');
+           Route::get('/category/create','CreateCategory')->name('category.create');
         });
 
         Route::resource('/organization-workspace', OrganisationWorkspaceController::class);

@@ -55,14 +55,17 @@ class PostController extends Controller
             'message' => 'blog post created successfully',
             'alert-type'=> 'success'
         );
-        return redirect()->route('admin.post.index')->with($notification);
+        return redirect('/admin/admin/post')->with($notification);
     }
 
-    public function show($id)
+    public function show(Post $post , $id)
     {
-        $post = Post::find($id);
         $posts = Post::all();
-        return view('admin.post.show',compact('post','posts'));
+      foreach ($posts as $post)
+      {
+          echo $post->image;
+      }
+        return view('admin.post.show',['post'=>$post,'posts'=>$posts]);
     }
 
 }

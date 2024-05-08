@@ -39,7 +39,7 @@
                                             <div class="avatar size-16">
                                                 <img
                                                     class="rounded-full"
-                                                    src="images/avatar/avatar-19.jpg"
+                                                    src="{{asset('backend/images/avatar/avatar-19.jpg')}}"
                                                     alt="avatar"
                                                 />
                                             </div>
@@ -258,12 +258,8 @@
                 </div>
 
                 <!-- Blog Post -->
-                <div
-                    class="mt-6 font-inter text-base text-slate-600 dark:text-navy-200"
-                >
-                    <h1
-                        class="text-xl font-medium text-slate-900 dark:text-navy-50 lg:text-2xl"
-                    >
+                <div class="mt-6 font-inter text-base text-slate-600 dark:text-navy-200">
+                    <h1 class="text-xl font-medium text-slate-900 dark:text-navy-50 lg:text-2xl">
                        {{$post->title}}
                     </h1>
                     <img
@@ -448,7 +444,7 @@
                             </div>
                             <div>
                                 <a
-                                    href="{{route('admin.post.show',$post->id)}}"
+                                    href="{{url('admin/admin/post',$post->id)}}"
                                     class="text-lg font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light"
                                 >{{$post->title}}</a
                                 >
@@ -459,7 +455,7 @@
                             <div class="grow">
                                 <div class="mt-2 flex items-center text-xs">
                                     <a
-                                        href="{{route('admin.post.show',$post->id)}}"
+                                        href="{{url('admin/admin/post/',$post->id)}}"
                                         class="flex items-center space-x-2 hover:text-slate-800 dark:hover:text-navy-100"
                                     >
                                         <div class="avatar size-6">
@@ -481,7 +477,7 @@
                             </div>
                             <div class="mt-1 flex justify-end">
                                 <a
-                                    href="{{route('admin.post.show',$post->id)}}"
+                                    href="{{url('admin/admin/post/',$post->id)}}"
                                     class="btn px-2.5 py-1.5 font-medium text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25"
                                 >
                                     Read Article
@@ -513,7 +509,7 @@
                                             class="mt-1 text-slate-800 line-clamp-3 dark:text-navy-100"
                                         >
                                             <a
-                                                href="{{route('admin.post.show',$post->id)}}"
+                                                href="{{url('admin/admin/post/',$post->id)}}"
                                                 class="font-medium text-slate-700 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light px-2"
                                             >{{$post->title}}</a
                                             >

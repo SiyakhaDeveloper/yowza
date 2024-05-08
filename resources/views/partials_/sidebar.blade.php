@@ -548,28 +548,6 @@
                 class="h-[calc(100%-4.5rem)] overflow-x-hidden pb-6"
                 x-init="$el._x_simplebar = new SimpleBar($el);"
             >
-                <ul class="flex flex-1 flex-col px-4 font-inter">
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-crm-analytics.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            CRM Analytics
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-orders.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Orders
-                        </a>
-                    </li>
-                </ul>
                 <div class="my-3 mx-4 h-px bg-slate-200 dark:bg-navy-500"></div>
                 <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li x-data="accordionItem('menu-item-1')">
@@ -579,7 +557,7 @@
                             class="flex items-center justify-between py-2 text-xs+ tracking-wide outline-none transition-[color,padding-left] duration-300 ease-in-out"
                             href="javascript:void(0);"
                         >
-                            <span>Cryptocurrency</span>
+                            <span>MANAGE BLOG POSTS</span>
                             <svg
                                 :class="expanded && 'rotate-90'"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -600,7 +578,7 @@
                             <li>
                                 <a
                                     x-data="navLink"
-                                    href="dashboards-crypto-1.html"
+                                    href="{{url('/admin/admin/post/create')}}"
                                     :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
                                     class="flex items-center justify-between p-2 text-xs+ tracking-wide outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4"
                                 >
@@ -608,14 +586,14 @@
                                         <div
                                             class="size-1.5 rounded-full border border-current opacity-40"
                                         ></div>
-                                        <span>Cryptocurrency v1</span>
+                                        <span>Create Blog Post</span>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a
                                     x-data="navLink"
-                                    href="dashboards-crypto-2.html"
+                                    href="{{url('/admin/admin/post/')}}"
                                     :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
                                     class="flex items-center justify-between p-2 text-xs+ tracking-wide outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4"
                                 >
@@ -623,10 +601,42 @@
                                         <div
                                             class="size-1.5 rounded-full border border-current opacity-40"
                                         ></div>
-                                        <span>Cryptocurrency v2</span>
+                                        <span>View All Blog Posts</span>
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                    x-data="navLink"
+                                    href="{{url('admin/admin/category/create')}}"
+                                    :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4"
+                                >
+                                    <div class="flex items-center space-x-2">
+                                        <div
+                                            class="size-1.5 rounded-full border border-current opacity-40"
+                                        ></div>
+                                        <span>Create Blog Categories</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                           <li>
+                                <a
+                                    x-data="navLink"
+                                    href="{{url('/admin/admin/category/all')}}"
+                                    :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4"
+                                >
+                                    <div class="flex items-center space-x-2">
+                                        <div
+                                            class="size-1.5 rounded-full border border-current opacity-40"
+                                        ></div>
+                                        <span>View Blog Categories</span>
+                                    </div>
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
                     <li x-data="accordionItem('menu-item-2')">
@@ -686,150 +696,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-personal.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Personal
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-cms-analytics.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            CMS Analytics
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-influencer.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Influencer
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-travel.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Travel
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-teacher.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Teacher
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-education.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Education
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-authors.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Authors
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-doctor.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Doctors
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-employees.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Employees
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-workspace.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Workspaces
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-meeting.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Meetings
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-project-boards.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Project Boards
-                        </a>
-                    </li>
                 </ul>
                 <div class="my-3 mx-4 h-px bg-slate-200 dark:bg-navy-500"></div>
-                <ul class="flex flex-1 flex-col px-4 font-inter">
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-widget-ui.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Widget UI
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            x-data="navLink"
-                            href="dashboards-widget-contacts.html"
-                            :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
-                            class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
-                        >
-                            Widget Contacts
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

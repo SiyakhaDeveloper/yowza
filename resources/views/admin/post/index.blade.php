@@ -20,13 +20,13 @@
         <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4">
             @foreach($posts as $post)
             <div class="flex flex-col">
-                <img class="h-44 w-full rounded-2xl object-cover object-center" src="{{url('upload/post_images/'.$post->image)}}" alt="image"/>
+                <img class="h-44 w-full rounded-2xl object-cover object-center" src="{{url('upload/post_images/',$post->image)}}" alt="image"/>
                 <div class="card -mt-8 grow rounded-2xl p-4">
                     <div>
-                        <a href="{{route('admin.post.show',$post->id)}}" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">{{$post->title}}</a>
+                        <a href="{{url('/admin/admin/post',$post->id)}}" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">{{$post->title}}</a>
                     </div>
                     <p class="mt-2 grow line-clamp-3">{{strip_tags($post->post_content)}}</p>
-                    <p><a href="{{route('admin.post.show',$post->id)}}" class="btn px-2.5 py-1.5 font-medium text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25">
+                    <p><a href="{{url('admin/admin/post',$post->id)}}" class="btn px-2.5 py-1.5 font-medium text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:text-accent-light dark:hover:bg-accent-light/20 dark:focus:bg-accent-light/20 dark:active:bg-accent-light/25">
                             Read Article
                         </a></p>
                     <div class="mt-4 flex items-center justify-between">
