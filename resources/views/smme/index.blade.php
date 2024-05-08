@@ -125,7 +125,7 @@
         <div class="mt-4 sm:mt-5 lg:mt-6">
             <div class="flex items-center justify-between">
                 <h2 class="text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">
-                    Media for lessons
+                    Learn
                 </h2>
                 <div class="flex">
                     <div class="flex items-center" x-data="{isInputActive:false}">
@@ -492,13 +492,141 @@
                 </div>
             </div>
         </div>
+
+        <div class="mt-4 sm:mt-5 lg:mt-6">
+            <div class="flex h-8 items-center justify-between">
+              <h2 class="text-base font-medium tracking-wide text-slate-700 dark:text-navy-100">
+                Latest Posts
+              </h2>
+              <a href="#" class="border-b border-dotted border-current pb-0.5 text-xs+ font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70">View All</a>
+            </div>
+            <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4">
+              <div class="flex flex-col">
+                <img class="h-44 w-full rounded-2xl object-cover object-center" src="images/object/object-2.jpg" alt="image">
+                <div class="card -mt-8 grow rounded-2xl p-4">
+                  <div>
+                    <a href="#" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">What is Tailwind CSS?</a>
+                  </div>
+                  <p class="mt-2 grow line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                    distinctio dolorum harum.
+                  </p>
+                  <div class="mt-4 flex items-center justify-between">
+                    <a href="#" class="flex items-center space-x-2 text-xs hover:text-slate-800 dark:hover:text-navy-100">
+                      <div class="avatar size-6">
+                        <img class="rounded-full" src="images/avatar/avatar-10.jpg" alt="avatar">
+                      </div>
+                      <span class="line-clamp-1">John Doe</span>
+                    </a>
+                    <p class="flex shrink-0 items-center space-x-1.5 text-slate-400 dark:text-navy-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span class="text-xs">25 May, 2022</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <img class="h-44 w-full rounded-2xl object-cover object-center" src="images/object/object-3.jpg" alt="image">
+                <div class="card -mt-8 grow rounded-2xl p-4">
+                  <div>
+                    <a href="#" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">Tailwind CSS Card Example</a>
+                  </div>
+                  <p class="mt-2 grow line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor on
+                    the sit.
+                  </p>
+                  <div class="mt-4 flex items-center justify-between">
+                    <a href="#" class="flex items-center space-x-2 text-xs hover:text-slate-800 dark:hover:text-navy-100">
+                      <div class="avatar size-6">
+                        <img class="rounded-full" src="images/avatar/avatar-20.jpg" alt="avatar">
+                      </div>
+                      <span class="line-clamp-1">Konnor Guzman </span>
+                    </a>
+                    <p class="flex shrink-0 items-center space-x-1.5 text-slate-400 dark:text-navy-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span class="text-xs">30 May, 2022</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <img class="h-44 w-full rounded-2xl object-cover object-center" src="images/object/object-4.jpg" alt="image">
+                <div class="card -mt-8 grow rounded-2xl p-4">
+                  <div>
+                    <a href="#" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">What is PHP?</a>
+                  </div>
+                  <p class="mt-2 grow line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor on
+                    the sit.
+                  </p>
+                  <div class="mt-4 flex items-center justify-between">
+                    <a href="#" class="flex items-center space-x-2 text-xs hover:text-slate-800 dark:hover:text-navy-100">
+                      <div class="avatar size-6">
+                        <img class="rounded-full" src="images/avatar/avatar-19.jpg" alt="avatar">
+                      </div>
+                      <span class="line-clamp-1">Travis Fuller </span>
+                    </a>
+                    <p class="flex shrink-0 items-center space-x-1.5 text-slate-400 dark:text-navy-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span class="text-xs">10 June, 2022</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <img class="h-44 w-full rounded-2xl object-cover object-center" src="images/object/object-5.jpg" alt="image">
+                <div class="card -mt-8 grow rounded-2xl p-4">
+                  <div>
+                    <a href="#" class="text-sm+ font-medium text-slate-700 line-clamp-1 hover:text-primary focus:text-primary dark:text-navy-100 dark:hover:text-accent-light dark:focus:text-accent-light">Top Design Systems</a>
+                  </div>
+                  <p class="mt-2 grow line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto assumenda.
+                  </p>
+                  <div class="mt-4 flex items-center justify-between">
+                    <a href="#" class="flex items-center space-x-2 text-xs hover:text-slate-800 dark:hover:text-navy-100">
+                      <div class="avatar size-6">
+                        <img class="rounded-full" src="images/avatar/avatar-18.jpg" alt="avatar">
+                      </div>
+                      <span class="line-clamp-1">Alfredo Elliott </span>
+                    </a>
+                    <p class="flex shrink-0 items-center space-x-1.5 text-slate-400 dark:text-navy-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span class="text-xs">19 June, 2022</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card w-96 bg-base-100 shadow-xl image-full">
+                <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
     </div>
     <div class="col-span-12 lg:col-span-4 xl:col-span-3">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-1 lg:gap-6">
             <div class="card pb-5">
                 <div class="mt-3 flex items-center justify-between px-4">
                     <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
-                        Working Hours
+                        ASSESSMENTS
+                        AVERAGE SCORE
                     </h2>
                     <div x-data="usePopper({placement:'bottom-end',offset:4})"
                         @click.outside="isShowPopper && (isShowPopper = false)" class="inline-flex">
@@ -548,7 +676,194 @@
                     </div>
                 </div>
                 <div class="px-4 text-center text-xs+ sm:px-5">
-                    <p>Working hours calculated based on your activity</p>
+                    <p>HOURS SPENT IN ONLINE TRAINING</p>
+                </div>
+            </div>
+
+            <div class="card pb-5">
+                <div class="my-3 flex h-8 items-center justify-between px-4 sm:px-5">
+                    <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">
+                        BUSINESS GROWTH
+                    </h2>
+
+                    <div x-data="usePopper({placement:'bottom-end',offset:4})"
+                        @click.outside="isShowPopper &amp;&amp; (isShowPopper = false)" class="inline-flex">
+                        <button x-ref="popperRef" @click="isShowPopper = !isShowPopper"
+                            class="btn -mr-1.5 size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <div x-ref="popperRoot" class="popper-root" :class="isShowPopper &amp;&amp; 'show'"
+                            style="position: fixed; inset: 0px 0px auto auto; margin: 0px; transform: translate(-78px, 132px);"
+                            data-popper-placement="bottom-end">
+                            <div
+                                class="popper-box rounded-md border border-slate-150 bg-white py-1.5 font-inter dark:border-navy-500 dark:bg-navy-700">
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Another
+                                            Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Something
+                                            else</a>
+                                    </li>
+                                </ul>
+                                <div class="my-1 h-px bg-slate-150 dark:bg-navy-500"></div>
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            class="flex h-8 items-center px-3 pr-8 font-medium tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100">Separated
+                                            Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.travelAnalytics); $el._x_chart.render() });"
+                        style="min-height: 212.7px;">
+                        <div id="apexchartsru2s9fqp" class="apexcharts-canvas apexchartsru2s9fqp apexcharts-theme-light"
+                            style="width: 406px; height: 212.7px;"><svg id="SvgjsSvg1159" width="406"
+                                height="212.70000000000002" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+                                class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)"
+                                style="background: transparent;">
+                                <foreignObject x="0" y="0" width="406" height="212.70000000000002">
+                                    <div class="apexcharts-legend" xmlns="http://www.w3.org/1999/xhtml"></div>
+                                </foreignObject>
+                                <g id="SvgjsG1161" class="apexcharts-inner apexcharts-graphical"
+                                    transform="translate(78, -20)">
+                                    <defs id="SvgjsDefs1160">
+                                        <clipPath id="gridRectMaskru2s9fqp">
+                                            <rect id="SvgjsRect1162" width="256" height="296" x="-3" y="-3" rx="0"
+                                                ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"
+                                                fill="#fff"></rect>
+                                        </clipPath>
+                                        <clipPath id="forecastMaskru2s9fqp"></clipPath>
+                                        <clipPath id="nonForecastMaskru2s9fqp"></clipPath>
+                                        <clipPath id="gridRectMarkerMaskru2s9fqp">
+                                            <rect id="SvgjsRect1163" width="254" height="294" x="-2" y="-2" rx="0"
+                                                ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"
+                                                fill="#fff"></rect>
+                                        </clipPath>
+                                    </defs>
+                                    <g id="SvgjsG1164" class="apexcharts-radialbar">
+                                        <g id="SvgjsG1165">
+                                            <g id="SvgjsG1166" class="apexcharts-tracks">
+                                                <g id="SvgjsG1167" class="apexcharts-radialbar-track apexcharts-track"
+                                                    rel="1">
+                                                    <path id="apexcharts-radialbarTrack-0"
+                                                        d="M 125 32.311890243902425 A 92.68810975609757 92.68810975609757 0 1 1 124.98382287315518 32.31189165562306 "
+                                                        fill="none" fill-opacity="1" stroke="rgba(242,242,242,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.576810975609758" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area"
+                                                        data:pathOrig="M 125 32.311890243902425 A 92.68810975609757 92.68810975609757 0 1 1 124.98382287315518 32.31189165562306 ">
+                                                    </path>
+                                                </g>
+                                                <g id="SvgjsG1169" class="apexcharts-radialbar-track apexcharts-track"
+                                                    rel="2">
+                                                    <path id="apexcharts-radialbarTrack-1"
+                                                        d="M 125 51.153963414634134 A 73.84603658536587 73.84603658536587 0 1 1 124.9871114352858 51.15396453937359 "
+                                                        fill="none" fill-opacity="1" stroke="rgba(242,242,242,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.576810975609758" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area"
+                                                        data:pathOrig="M 125 51.153963414634134 A 73.84603658536587 73.84603658536587 0 1 1 124.9871114352858 51.15396453937359 ">
+                                                    </path>
+                                                </g>
+                                                <g id="SvgjsG1171" class="apexcharts-radialbar-track apexcharts-track"
+                                                    rel="3">
+                                                    <path id="apexcharts-radialbarTrack-2"
+                                                        d="M 125 69.99603658536584 A 55.00396341463416 55.00396341463416 0 1 1 124.9903999974164 69.99603742312411 "
+                                                        fill="none" fill-opacity="1" stroke="rgba(242,242,242,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.576810975609758" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area"
+                                                        data:pathOrig="M 125 69.99603658536584 A 55.00396341463416 55.00396341463416 0 1 1 124.9903999974164 69.99603742312411 ">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                            <g id="SvgjsG1173">
+                                                <g id="SvgjsG1178" class="apexcharts-series apexcharts-radial-series"
+                                                    seriesName="Booked" rel="1" data:realIndex="0">
+                                                    <path id="SvgjsPath1179"
+                                                        d="M 125 32.311890243902425 A 92.68810975609757 92.68810975609757 0 0 1 159.72157704589188 210.938918876168 "
+                                                        fill="none" fill-opacity="0.85" stroke="rgba(74,222,128,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.842073170731709" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
+                                                        data:angle="158" data:value="44" index="0" j="0"
+                                                        data:pathOrig="M 125 32.311890243902425 A 92.68810975609757 92.68810975609757 0 0 1 159.72157704589188 210.938918876168 ">
+                                                    </path>
+                                                </g>
+                                                <g id="SvgjsG1180" class="apexcharts-series apexcharts-radial-series"
+                                                    seriesName="Cancelled" rel="2" data:realIndex="1">
+                                                    <path id="SvgjsPath1181"
+                                                        d="M 125 51.153963414634134 A 73.84603658536587 73.84603658536587 0 1 1 102.18031972788785 195.23175429708252 "
+                                                        fill="none" fill-opacity="0.85" stroke="rgba(244,63,94,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.842073170731709" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area apexcharts-radialbar-slice-1"
+                                                        data:angle="198" data:value="55" index="0" j="1"
+                                                        data:pathOrig="M 125 51.153963414634134 A 73.84603658536587 73.84603658536587 0 1 1 102.18031972788785 195.23175429708252 ">
+                                                    </path>
+                                                </g>
+                                                <g id="SvgjsG1182" class="apexcharts-series apexcharts-radial-series"
+                                                    seriesName="Unconfirmed" rel="3" data:realIndex="2">
+                                                    <path id="SvgjsPath1183"
+                                                        d="M 125 69.99603658536584 A 55.00396341463416 55.00396341463416 0 1 1 76.89244962678663 151.6664506150922 "
+                                                        fill="none" fill-opacity="0.85" stroke="rgba(168,85,247,0.85)"
+                                                        stroke-opacity="1" stroke-linecap="round"
+                                                        stroke-width="8.842073170731709" stroke-dasharray="0"
+                                                        class="apexcharts-radialbar-area apexcharts-radialbar-slice-2"
+                                                        data:angle="241" data:value="67" index="0" j="2"
+                                                        data:pathOrig="M 125 69.99603658536584 A 55.00396341463416 55.00396341463416 0 1 1 76.89244962678663 151.6664506150922 ">
+                                                    </path>
+                                                </g>
+                                                <circle id="SvgjsCircle1174" r="40.71555792682928" cx="125" cy="125"
+                                                    class="apexcharts-radialbar-hollow" fill="transparent"></circle>
+                                                <g id="SvgjsG1175" class="apexcharts-datalabels-group"
+                                                    transform="translate(0, 0) scale(1)" style="opacity: 1;"><text
+                                                        id="SvgjsText1176" font-family="Helvetica, Arial, sans-serif"
+                                                        x="125" y="125" text-anchor="middle" dominant-baseline="auto"
+                                                        font-size="16px" font-weight="600" fill="#373d3f"
+                                                        class="apexcharts-text apexcharts-datalabel-label"
+                                                        style="font-family: Helvetica, Arial, sans-serif;">Total</text><text
+                                                        id="SvgjsText1177" font-family="Helvetica, Arial, sans-serif"
+                                                        x="125" y="157" text-anchor="middle" dominant-baseline="auto"
+                                                        font-size="16px" font-weight="400" fill="#373d3f"
+                                                        class="apexcharts-text apexcharts-datalabel-value"
+                                                        style="font-family: Helvetica, Arial, sans-serif;">166</text>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <line id="SvgjsLine1184" x1="0" y1="0" x2="250" y2="0" stroke="#b6b6b6"
+                                        stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"
+                                        class="apexcharts-ycrosshairs"></line>
+                                    <line id="SvgjsLine1185" x1="0" y1="0" x2="250" y2="0" stroke-dasharray="0"
+                                        stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden">
+                                    </line>
+                                </g>
+                            </svg></div>
+                    </div>
+                </div>
+                <div class="mx-auto mt-3 max-w-xs px-4 text-center text-xs+ sm:px-5">
+                    <p>Travel analytics calculated based on travels count</p>
                 </div>
             </div>
 

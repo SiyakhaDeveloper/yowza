@@ -23,4 +23,6 @@ class SmmeDashboardController extends Controller
 
         return view('smme.index', compact('workspaces'));
     }
+
+    
 }
