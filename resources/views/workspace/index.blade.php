@@ -72,19 +72,25 @@
             </div>
         </div>
         <div class="flex grow flex-col items-center px-4 pb-5 sm:px-5">
+            @if($workspace->company_logo)
             <div class="avatar size-20">
-                <img class="rounded-full" src="images/avatar/avatar-20.jpg" alt="avatar">
+                <img class="rounded-full" src="{{ Storage::url($workspace->company_logo) }}" alt="avatar">
             </div>
+            @else
+            <div class="avatar size-20">
+                <img class="rounded-full" src="{{ asset('backend/images/Yowza_Icon_400px.png') }}" alt="avatar">
+            </div>
+            @endif
             <h3 class="pt-3 text-lg font-medium text-slate-700 dark:text-navy-100">
-                {{ $workspace->name }}
+                {{ $workspace->company_trading_name }}
             </h3>
             <p class="text-xs+">{{ $workspace->industry }}</p>
 
             <div class="mt-6 grid w-full grid-cols-2 gap-2">
-                <form method="POST" action="{{ route('portal.workspaces.join', $workspace) }}">
+                <form method="POST" action="{{ route('smme.workspaces.join', ['prefix' => 'admin', 'workspace' => $workspace]) }}">
                     @csrf
                     <button type="submit"
-                        class="btn space-x-2 bg-primary px-0 font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                        class="btn space-x-2 bg-primary font-medium text-white shadow-lg shadow-primary/50 hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:shadow-accent/50 dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
 
                         <span>Join Workspace</span>
                     </button>

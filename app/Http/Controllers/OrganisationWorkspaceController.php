@@ -36,18 +36,25 @@ class OrganisationWorkspaceController extends Controller
      */
     public function store(Request $request)
     {
-        
         $request->validate([
-            'name' => 'required|string|max:255',
+            'company_trading_name' => 'required|string|max:255',
+            'company_logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file upload
             'industry' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
             'website' => 'nullable|string|max:255',
             'description' => 'nullable|string',
         ]);
 
-        // Create a new workspace
-        $workspace = Organization::create([
-            'name' => $request->name,
+        // Process and store the uploaded logo
+        $logoPath = null;
+        if ($request->hasFile('company_logo')) {
+            $logoPath = $request->file('company_logo')->store('company_logos', 'public');
+        }
+
+        // Create a new organization
+        $organization = Organization::create([
+            'company_trading_name' => $request->company_trading_name,
+            'company_logo' => $logoPath,
             'industry' => $request->industry,
             'location' => $request->location,
             'website' => $request->website,
@@ -55,10 +62,10 @@ class OrganisationWorkspaceController extends Controller
         ]);
 
         // Optionally, you can perform additional actions here,
-        // such as associating the workspace with the currently authenticated user.
+        // such as associating the organization with the currently authenticated user.
 
-        // Return a response indicating success
-        return response()->json(['message' => 'Workspace created successfully', 'workspace' => $workspace], 201);
+        return redirect()->route('workspace.show', $organization->id)
+        ->with('success', 'Organization created successfully');
     }
 
     public function join(Request $request, Organization $workspace)
