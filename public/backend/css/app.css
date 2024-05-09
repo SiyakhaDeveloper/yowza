@@ -343,10 +343,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #f8fafc;
     color: #64748b;
-    font-family: font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;;
+    font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-size: .875rem;
     line-height: 1.25rem;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
 }
 
 :is(.dark body) {

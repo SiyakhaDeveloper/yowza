@@ -4,8 +4,8 @@
     <div class="w-full max-w-[26rem] p-4 sm:px-5">
         <div class="text-center">
             <img
-                class="mx-auto size-16"
-                src="https://yowza.co.za/images/Logo/April-2024/yowza-logo-mark-1.png"
+                class="mx-auto"
+                src="https://yowza.co.za/images/Logo/April-2024/yowza-main-logo.png"
                 alt="logo"
             />
             <div class="mt-4">
